@@ -110,17 +110,6 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
 	return;
 	}
 
-	/*****************************************************************************
-	*  Prediction
-	****************************************************************************/
-
-	/**
-	TODO:
-	* Update the state transition matrix F according to the new elapsed time.
-	- Time is measured in seconds.
-	* Update the process noise covariance matrix.
-	*/
-
 	//PREDICTION
   	//compute the time elapsed between the current and previous measurements
   	float dt = (meas_package.timestamp_ - time_us_) / 1000000.0;	//dt - expressed in seconds
